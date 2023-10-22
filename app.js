@@ -163,6 +163,7 @@ firstNamesArrEncoded.forEach((el) => {
 console.log(firstNamesArrEncodedAndModified);
 
 /*
+Zad. 5
 Dany jest string zawierający nazwy towarów oddzielane przecinkami (np. "jajka, mleko, masło, chleb").
 Na tej podstawie stwórz cennik - tablicę obiektów.
 Każdy obiekt w tej tablicy zawiera dwa pola - nazwę (wydobytą ze stringu) oraz cenę (losową wartość rzeczywistą z dokładnością do dwóch miejsc po przecinku).
