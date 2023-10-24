@@ -6,13 +6,9 @@ let resultStr = "";
 const startNum = 1;
 const endNum = 100;
 
-resultStr = resultStr.concat("", resultStr);
-
-for (let i = startNum + 1; i <= endNum; ++i) {
+for (let i = startNum; i <= endNum; ++i) {
     const currentResult = dividedBy(i)
-    if (currentResult) {
-        resultStr = resultStr.concat(' ', currentResult);
-    }
+    resultStr = resultStr.concat(' ', currentResult);
 }
 console.log("---------------------------");
 console.log(resultStr);
@@ -22,7 +18,7 @@ function dividedBy(number) {
     if (number % 2 == 0 && number % 3 != 0) return "Fiz";
     else if (number % 2 != 0 && number % 3 == 0) return "Buz";
     else if (number % 2 == 0 && number % 3 == 0) return "FizBuz";
-    return "";
+    return number;
 }
 
 /*
@@ -142,7 +138,7 @@ Następnie z każdego imienia dłuższego niż 6 znaków wytnij środek, aby zos
 Np. imię "Kazimierz" zmieni się w "K4z...3rz". Efekt wypisz do konsoli.
 */
 
-let firstNamesArr = ["Grzegorz", "Przemysław", "Karolina", "Ewelina", "Dawid"]
+let firstNamesArr = ["Grzegorz", "Przemysław", "Karolina", "Ewelina", "Dawid", "Alan"]
 const firstNamesArrEncoded = [];
 firstNamesArr.forEach((el) => {
     el = el.replace(/a/g, '4').replace(/A/g, '4');
@@ -157,8 +153,8 @@ firstNamesArrEncoded.forEach((el) => {
         const charArray = el.split('');
         charArray.splice(prefixLength, el.length - prefixLength - postfixLength, '.', '.', '.');
         el = charArray.join('');
-        firstNamesArrEncodedAndModified.push(el);
     }
+    firstNamesArrEncodedAndModified.push(el);
 });
 console.log(firstNamesArrEncodedAndModified);
 
